@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/llml.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-section container-fluid d-flex justify-content-between my-3 align-items-center">
+            <div class="header-section-name">
+                <p>Frank Company Ltd</p>
+            </div>
+            <div class="header-section-logo">
+                <img src="images/llml.png" alt="">
+            </div>
+            <div class="header-section-buttons">
+                <div>
+                    <button>User</button>
+                    <button>Log out</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container main-part ">
+
+            <div class="d-flex justify-content-between my-3">
+                <div>
+                    <p class="m-0 current-balance">Current Balance</p>
+                    <p>29/05/2022</p>
+                </div>
+                <div>
+                    <p><span class="mx-2 total" id="mytotal">0</span>$</p>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-around my-3 overf">
+
+                <div class="first-part">
+                    <ul id="mylist">
+                        <!-- <li> -->
+                            <!-- <div class="d-flex justify-content-between my-2 mx-3">
+                                <p id="display-reason">Reason</p>
+                                <p><span class="mx-2" id="amount">534534543</span>$</p>
+                            </div> -->
+                        <!-- </li>  -->
+                    </ul>
+                    
+                </div>
+
+                <div class="ml-3">
+                    <div class="withdraw">
+                        <div><p>Withdraw money</p></div>
+                        <!-- <form action=""  id="withdraw"> -->
+                            <div class="d-flex">
+                                <div class="text-center">
+                                 <input type="text" id="withdraw-reason">
+                                 <label for="">Reason</label>
+                                </div>
+                                <div class="text-center">
+                                 <input type="text" id="withdraw-amount">
+                                 <label for="">Amount</label>
+                                </div>
+                               <div>
+                                 <button id="withdraw-button"> Withdraw</button>
+                               </div>
+                             </div>
+                        <!-- </form> -->
+                    </div>
+
+                    <div class="deposit">
+                        <div><p>Deposit money</p></div>
+                       <div class="d-flex">
+                        <div class="text-center">
+                            <input type="text" id="deposit-source">
+                            <label for="">Source</label>
+                           </div>
+                           <div class="text-center">
+                            <input type="text" id="deposit-amount">
+                            <label for="">Amount</label>
+                           </div>
+                          <div>
+                            <button id="deposit-button">Deposit</button>
+                          </div>
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="container main-part">
+            <div class="d-flex mt-3 justify-content-around align-items-center">
+                <p>Total withdrawn amount: <span id="t-withdraw">0</span> $</p>
+                <p>Total deposited amount: <span id="t-deposit">0</span> $</p>
+               
+            </div>
+            
+        </div>
+    </footer>
+    <script src="JS/money.js"></script>
+</body>
+</html>

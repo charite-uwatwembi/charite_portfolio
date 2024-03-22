@@ -1,0 +1,43 @@
+.wrapper{
+    width: 100%;
+    height: 100vh;
+}
+.entering{
+    height: 40%;
+    background-color: #eee;
+    padding-bottom: 10px;
+}
+.output{
+    height: 55%;
+    background-color:white;
+}
+.hi{
+    font-size: 20px;
+    font-weight: 500;
+}
+.hi span{
+    font-size: 70px;
+}
+input{
+    outline: none;
+}
+button{
+    width: 90px;
+    background-color: purple !important;
+    outline: none;
+}
+select{
+    width: 150px;
+    outline:none;
+}
+.expenses{
+    width: 60%;
+    margin: 60px auto;
+}
+.myexpense,.myincomes{
+    background-color: #eee;
+}
+.myexpense span,.myincomes span{
+    color: red;
+    margin-right:3px ;
+}

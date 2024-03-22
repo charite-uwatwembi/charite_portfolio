@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/budget.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="entering d-flex justify-content-center align-items-center">
+            <div class="row ">
+                <div class="hi col-12 text-center mt-5">
+                    <p><span>0</span> RWF</p>
+                </div>
+                <div class="col-12 d-flex justify-content-between mb-5  justify-content-center ">
+                    <input type="text" class="p-2 shadow border-0 rounded " name="" placeholder="Reason" id="reason">
+                    <input type="number"class="p-2 shadow border-0  rounded "  name="" placeholder="Amount" id="amount">
+                    <select name="" class="p-2 shadow border-0 rounded " id="option">
+                      <option value="Expense">Expense</option>
+                      <option value="Income">Income</option>
+                    </select>
+                    <button class="btn rounded  shadow border-0 text-white" id="mybtn">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="output">
+            <div class="container-fluid">
+                <div class="expenses d-flex row justify-content-center align-items-center justify-content-between ">
+                    <div class="myexpense pt-3 col-5 d-flex  align-items-center border justify-content-between">
+                        <p>Expenses</p>
+                        <p><span>-</span>0</p>
+                    </div>
+                    <div class="myincomes pt-3 col-5  d-flex justify-content-center align-items-center border justify-content-between">
+                        <p>Incomes</p>
+                        <p><span>+</span>0</p>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let reason=document.getElementById("reason");
+        let amount=document.getElementById("amount");
+        let option=document.getElementById('option');
+        let mybtn=document.getElementById("mybtn");
+
+        mybtn.addEventListener("click",function () {
+            if (reason.value==="" ) {
+                alert("enter first the reason!!!")
+            }
+            if ( amount.value==="") {
+                alert("enter first the amount!!!") 
+            } 
+            
+        })
+       
+    </script>
+</body>
+</html>

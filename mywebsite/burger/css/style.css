@@ -1,0 +1,218 @@
+*{
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: rgba(194, 190, 190, 0.882);
+}
+.icons img{
+    width:30px;
+    height:30px;
+}
+.all{
+    background-image: linear-gradient(rgba(18, 17, 17, 0.917),rgba(18, 17, 17, 0.917)),url("../images/Untitled-1.jpg");
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    font-family:fantasy;
+}
+.myheader-menu{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-image: linear-gradient( black,rgb(24, 24, 2));   
+}
+
+.mylogo img{
+    width: 90px;
+    height: 50px;
+}
+.super-list{
+    width: 50%;
+}
+.list-menu a,.my-hidden-menu a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: all .4s;
+}
+.list-menu a:hover,.my-hidden-menu a:hover{
+    text-decoration: underline;
+    color: #f9bb0d;  
+}
+.list-menu li,.my-hidden-menu li{
+    list-style: none;
+    font-size: 18px;
+    font-family:fantasy;
+}
+.first-switch{
+    position: relative;
+}
+.closingIcon{
+    display: none;
+}
+.closingIcon img{
+    width:25px;
+    height:25px;
+}
+.myfirstsearch{
+    position: relative;
+    width: 100%;
+}
+.main-search{
+    transition: all .4s;
+    position: fixed;
+    z-index: 99;
+    top:40px;
+}
+.myhidden-toggle{
+    top: 100px;
+    display: none;
+}
+.my-hidden-menu{
+    position: fixed;
+    width: 20%;
+    height: 230px;
+    right: 10%;
+    display: none;
+    background-color: rgba(15, 14, 14, 0.901);
+    
+    border: 1px solid rgba(245, 245, 245, 0.197);
+    transition: all .5s;
+}
+
+.my-hidden-menu li{
+    border-bottom: 1px solid rgba(245, 245, 245, 0.27);
+   display: flex;
+   color: rgba(255, 255, 255, 0.882);
+   align-items: center;
+    padding-left: 10px;
+    height: 57px;
+    
+}
+.my-hidden-menu li:hover{
+    background-color: rgba(255, 255, 255, 0.663);
+  font-size: 23px;
+}
+.search-input{
+    width: 100%;
+}
+.search-input input{
+border: none;
+border-top: 1px solid rgba(245, 245, 245, 0.197);
+outline: none;
+width: 100%;
+color: white;
+background-color:rgba(29, 27, 27, 0.839);
+}
+.mycontent{
+    width: 100%;
+}
+.mycontent img{
+    width:70%;
+    height: 80%;
+}
+.myhome img{
+    width: 550px;
+    height:500px;
+}
+.myhome p{
+    text-align: center;
+    margin-top: 10px
+}
+.mymenu{
+    margin-top: 130px;
+    margin-bottom:90px;
+}
+
+.myburger{
+    padding-bottom: 80px;
+}
+.myburger img{
+    width:100%;
+    height: 350px;
+}
+
+.mycart button,.mybtns {
+    width: 160px;
+    border: 1px solid rgba(245, 245, 245, 0.197);
+    color: rgba(255, 255, 255, 0.912);
+    transition: all .5s;
+}
+
+.mycart button:hover, .mybtns:hover {
+    background-color: #c99e26ab;
+    font-weight: bold;
+    color: black;
+}
+.ourquality{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+}
+.about-image img{
+    width: 350px;
+    height: 390px;
+}
+.tick img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.mycontact{
+    width: 100%;
+}
+.contact-image img{
+    padding-left: 50px;
+    width: 400px;
+    height: 270px;
+}
+ .myform{
+    width: 68%;
+} 
+.mydatabase input, .mydatabase textarea{
+    width: 50%;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    color: rgba(245, 245, 245, 0.752);
+    background-color: transparent;
+    border: 1px solid rgba(245, 245, 245, 0.197);
+}
+.submitting button{
+    width: 150px;
+    padding: 10px;
+    color:white;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid rgba(245, 245, 245, 0.197);
+}
+h1{
+    color:rgba(255, 255, 255, 0.844);
+}
+@media (max-width: 990px) {
+    .myhome img{
+        width: 300px;
+        height:300px;
+    }
+    .contact-image img{
+        width: 350px;
+        height: 270px;
+    }
+    .myburger,.myabout,.contacts{
+        flex-direction: column !important;
+    }
+    .my-hidden-menu{
+        width: 40%;
+    }
+    .searchingpng,.super-list,.list-menu{
+        display: none;
+    }
+    .myform{
+        width: 100%;
+    }
+  }
+@media (max-width: 500px) {
+   
+    .mycontent{
+        padding: 0 25px;
+    }
+  }

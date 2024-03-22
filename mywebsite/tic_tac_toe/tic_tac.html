@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container{
+            width: 100%;
+            height: 100vh;
+            
+        }
+        .game{
+            min-width:60%;
+            min-height: 60%;
+        }
+        .card-holder{
+            max-width:35%;
+            display: grid;
+            grid-template-columns: repeat(3,33%);
+            margin: 0;
+            
+        }
+        .cards{
+            min-width:100%;
+            height: 50px;
+            border: 2px solid black;
+            display: grid;
+            place-items: center;
+        }
+        .now{
+            margin-left: 200px;
+            max-width:90%;
+            padding: 20px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="game">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <p>X</p>
+                    <p>0</p>
+                </div>
+                <div class="d-flex">
+                    <p>O</p>
+                    <p>0</p>
+                </div>
+            </div>
+    
+            <div class="now">
+                <div class="card-holder">
+                    <div class="cards" myvalues=0><p class="para"></p></div>
+                    <div class="cards" myvalues=1><p class="para"></p></div>
+                    <div class="cards" myvalues=2><p class="para"></p></div>
+                    <div class="cards" myvalues=3><p class="para"></p></div>
+                    <div class="cards" myvalues=4><p class="para"></p></div>
+                    <div class="cards" myvalues=5><p class="para"></p></div>
+                    <div class="cards" myvalues=6><p class="para"></p></div>
+                    <div class="cards" myvalues=7><p class="para"></p></div>
+                    <div class="cards" myvalues=8><p class="para"></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let cards=document.getElementsByClassName("cards");
+        let para=document.getElementsByClassName("para");
+        let goal=[[0,3,6],[6,7,8],[2,5,8],[0,1,2],[2,4,6],[0,4,8]];
+        let myarray=[];
+        let count=0;
+        let win;
+        let win_2=0;
+        let mycards=Array.from(cards);
+        let mypara=Array.from(para);
+        let chosen=0;
+        let trying="cut";
+        
+        mycards.forEach((n)=>{
+            n.addEventListener("click",function(){
+                mypara[n.getAttribute("myvalues")].innerText="X";
+                myarray.push((n.getAttribute("myvalues"))*1)
+                setTimeout(function(){
+                    p_2()},1000)
+                })
+                
+                
+                
+            })
+            
+            function randomly(){
+                chosen = Math.floor(Math.random()*10);
+                if(myarray.includes(chosen) || chosen>8){
+                    randomly();
+                }
+                return chosen;
+            }
+
+            function p_2(){
+                var mynum=randomly();
+                
+                    // let check=setInterval(checking_goal,1000);
+                    // if(count==3){
+                    //     clearInterval(check)
+                    // }
+                    checking_goal();
+                if(win=="win"){
+                alert(win)
+                mypara.forEach((n)=>{
+                    n.innerText=""
+                    win=""
+                })
+                myarray=[];
+                }
+                setTimeout(function(){
+                mypara[mynum].innerText="O"
+                myarray.push(mynum);
+                },1000)
+            }
+            
+            let goals=[[0,3,6],[6,7,8],[2,5,8],[0,1,2],[2,4,6],[0,4,8]];
+            function checking_goal(){
+                // for(let i=0;i<goal.length;i++){
+                //     for(let x=0;x<goal[i].length;x++){
+                //         if(mypara[(goal[i][x])].innerText=="X" ){
+                //             count+=1;
+                //         }
+                //     }
+                //     count=0;
+                // }
+
+
+
+               if(mypara[0].innerText=="X" && mypara[3].innerText=="X" && mypara[6].innerText=="X" 
+               || mypara[0].innerText=="O" && mypara[3].innerText=="O" && mypara[6].innerText=="O" ){
+                win="win";
+                
+               }
+               if(mypara[6].innerText=="X" && mypara[7].innerText=="X" && mypara[8].innerText=="X"
+               || mypara[6].innerText=="O" && mypara[7].innerText=="O" && mypara[8].innerText=="O"    ){
+                win="win";
+                
+               }
+               if(mypara[2].innerText=="X" && mypara[5].innerText=="X" && mypara[8].innerText=="X"
+               || mypara[2].innerText=="O" && mypara[5].innerText=="O" && mypara[8].innerText=="O"    ){
+                win="win";
+                
+               }
+               if(mypara[1].innerText=="X" && mypara[2].innerText=="X" && mypara[0].innerText=="X" 
+               || mypara[1].innerText=="O" && mypara[2].innerText=="O" && mypara[0].innerText=="O"   ){
+                win="win";
+                
+               }
+               if(mypara[2].innerText=="X" && mypara[4].innerText=="X" && mypara[6].innerText=="X" ||
+               mypara[2].innerText=="O" && mypara[4].innerText=="O" && mypara[6].innerText=="O"
+                ){
+                win="win";
+                
+               }
+               if(mypara[0].innerText=="X" && mypara[4].innerText=="X" && mypara[8].innerText=="X"
+               || mypara[0].innerText=="O" && mypara[4].innerText=="O" && mypara[8].innerText=="O"    ){
+                win="win";
+                
+               }
+            }
+            
+    </script>
+</body>
+</html>

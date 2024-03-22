@@ -1,0 +1,88 @@
+body{
+    background-color: #eee;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+.header-section-logo img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow:0px 2px 20px 6px #8bbae9;
+}
+.header-section-name{
+    font-weight: 500;
+    font-size: 22px;
+}
+.header-section-buttons button{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 3px 25px;
+}
+.main-part{
+    padding: 10px 100px;
+}
+.first-part{
+    background-color: white;
+    width: 330px;
+    height: 260px;
+    overflow: auto;
+}
+.withdraw{
+    background-color: rgba(235, 156, 10, 0.905);
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+.deposit{
+    background-color: rgb(33, 193, 97);
+    padding: 10px 30px;
+}
+.first-part,.withdraw,.deposit{
+    border-radius: 5px;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+    padding: 20px 10px;
+}
+.total,.current-balance{
+    font-size: 25px;
+}
+input,button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding:3px 4px;
+    transition: all 0.3s;
+}
+
+input:focus{
+    /* border: none; */
+    border: 1px solid blue;
+    background-color: #eee;
+}
+.mysource,.myreason{
+    border-radius: 15px;
+    padding: 0px 15px;
+}
+
+.myreason{
+    background-color: rgba(235, 156, 10, 0.905);
+    ;
+}
+#t-withdraw{
+    color:rgba(235, 156, 10, 0.905);
+    font-size: 25px;
+}
+#t-deposit{
+    color:rgb(33, 193, 97) ;
+    font-size: 25px;
+}
+.mysource{
+    background-color: rgb(33, 193, 97);
+   
+}
